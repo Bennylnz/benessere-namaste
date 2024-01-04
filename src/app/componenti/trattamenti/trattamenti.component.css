@@ -1,0 +1,28 @@
+*{
+    background-color: #ddb892;
+    color: #342d25;   
+}
+
+img{
+    height: 70px;
+}
+
+
+table{
+    width: 30%;    
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+td ,th , tr {
+    background-color: transparent;
+    color: #342d25;   
+}
+
+.divider-finale{
+    transform: rotate(180deg);
+    height: 70px;
+}

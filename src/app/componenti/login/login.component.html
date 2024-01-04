@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>   
+      <body>
+          <div class="wrapper">           
+                  <h1>Login</h1>
+                  <div class="input-box">
+                      <input type="text" placeholder="E-mail" #userName required>
+                      <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="password" placeholder="Password"  #userPassword required>
+                      <i class='bx bxs-lock-alt'></i>
+                  </div>
+                  <button class="btn" (click)="authService.SignIn(userName.value, userPassword.value)">Login</button>            
+          </div>
+      </body>

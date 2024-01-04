@@ -1,0 +1,124 @@
+*{
+    background: #ddb892;
+    color: #342d25;
+    
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .pt-5{
+        width: 100vw;
+    }
+
+    video{
+        width:300px
+    }
+
+   
+}
+
+h1{
+    font-size: 55px;
+    letter-spacing: -7px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'BhuTuka Expanded One', serif;  
+}
+
+h2{
+    font-size: 23px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'BhuTuka Expanded One', serif; 
+}
+
+h3{
+    line-height: 45px;
+    margin-bottom: 0px;
+}
+
+hr{
+    width: 500px;
+    height: 10px;
+    border-top: 4px solid; 
+}
+
+.p-custom{
+   margin-bottom: 10px;
+   margin-top: 50px;   
+   font-size: 25px;
+   font-weight: bold;  
+}
+
+.p-address{
+    font-size: 25px;      
+}
+
+
+.negozio{       
+    height: 500px; 
+    border-radius: 25px;
+    box-shadow: 5px 3px 22px 2px #000000;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.viso{
+   width: 1000px;
+   border-radius: 20px;
+   box-shadow: 0px 6px 23px 4px rgba(52,45,37,0.62);   
+}
+
+
+
+
+.ml2 {
+   width: 600px;
+   font-size:x-large;
+   text-align: center;
+   line-height: 30px; 
+   margin-top: 50px;  
+  }
+
+
+  .whatsapp{
+    background-color: #ffffff;
+    color: #342d25;    
+    width: 600px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+  }
+  
+
+
+
+
+
+
+
+ 

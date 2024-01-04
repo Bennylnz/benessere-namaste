@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, HostListener , OnInit } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'benessere-namaste';
+  
 }

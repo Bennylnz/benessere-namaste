@@ -1,0 +1,27 @@
+nav{
+    background-color: #ddb892;
+    color: #342d25;
+}
+
+
+.navbar.scrolled {
+    background-color: white; 
+    color: #342d25;
+    transition: 0.4s;
+  }
+
+
+.dropdown .dropdown-menu{
+    display: none;
+}
+
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+    display: block;    
+}
+@media screen and (min-width: 769px) {
+    .dropend:hover > .dropdown-menu{
+        position: absolute;
+        top:0;
+        left: 100%;
+    }  
+}

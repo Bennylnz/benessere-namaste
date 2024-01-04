@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg fixed-top"  [class.scrolled]="isNavbarScrolled" id="mainNavbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../../assets/media/logo bn.png" style="height: 30px;" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Estetica
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item dropend">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Uomo
+              </a>
+              <ul class="dropdown-menu">                  
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica uomo/Viso">Viso</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica uomo/Epilazione Uomo">Epilazione Uomo</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica uomo/Laser Uomo">Laser Uomo</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica uomo/Mani e Piedi">Mani e Piedi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropend">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Donna
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Trattamenti Corpo">Trattamenti Corpo</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Epilazione">Epilazione</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Laser">Laser</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Trucco Semipermanente">Trucco Semipermanente</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Sopracciglia e Ciglia">Sopracciglia e Ciglia</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Make-Up">Make-Up</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Nails">Nails</a></li>
+                <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Estetica donna/Pedicure">Pedicure</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Parruccheria
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Parruccheria/Servizio Styling">Servizio Styling</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Parruccheria/Servizio Tecnico">Servizio Tecnico</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Parruccheria/Servizio Sposa">Servizio Sposa</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Parruccheria/Servizio Trattamenti">Servizio Trattamenti</a></li>              
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Barberia
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Barberia/Servizio Styling">Servizio Styling</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Barberia/Servizio Tecnico">Servizio Tecnico</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Barberia/Servizio Sposo">Servizio Sposo</a></li>
+            <li><a class="dropdown-item closeNavbar" routerLink="/trattamenti/Barberia/Servizio Trattamenti">Servizio Trattamenti</a></li>    
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contatti</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">          
+        <button class="btn" routerLink="/login" *ngIf="!isUserLoggedIn()">Login</button>
+        <button class="btn" routerLink="/adminPage" *ngIf="isUserLoggedIn()">Admin</button>
+        <a class="btn" (click)="authService.SignOut()" *ngIf="isUserLoggedIn()">
+          Log out
+        </a>
+        
+      </form>
+    </div>
+  </div>
+</nav>
+
+
