@@ -75,14 +75,6 @@ hr{
 }
 
 
-.negozio{       
-    height: 500px; 
-    border-radius: 25px;
-    box-shadow: 5px 3px 22px 2px #000000;
-    padding: 0px;
-    margin-top: 20px;
-}
-
 .logo{
     width: 200px;
 }
@@ -125,6 +117,7 @@ hr{
     border-radius: 25px;
     font-family: Roboto, sans-serif;
     text-decoration: none;
+    z-index: 2;
   }
   
 

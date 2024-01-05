@@ -8,9 +8,6 @@
 
 form{     
     color: white;
-    border: 1px solid white;
-    border-radius: 30px;
-    padding: 100px;
 }
 
 input , select{
@@ -42,5 +39,7 @@ option{
 @media screen and (max-width: 992px) {
     form {
         padding: 15px;
+        
     }
+
   }

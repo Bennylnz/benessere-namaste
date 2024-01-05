@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/benessere-namaste",
+    "public": "dist\\benessere-namaste",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -13,6 +13,4 @@
       }
     ]
   }
-
-  
 }
