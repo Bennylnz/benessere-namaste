@@ -40,6 +40,7 @@ import { TrattamentiComponent } from './componenti/trattamenti/trattamenti.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { FooterComponent } from './componenti/footer/footer.component';
+import { ImageUploadComponent } from './componenti/image-upload/image-upload.component';
 
 
 
@@ -57,6 +58,7 @@ import { FooterComponent } from './componenti/footer/footer.component';
     NavbarComponent,
     TrattamentiComponent,
     FooterComponent,
+    ImageUploadComponent,
     
   ],
   imports: [

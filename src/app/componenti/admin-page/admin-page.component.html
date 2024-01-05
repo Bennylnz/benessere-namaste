@@ -29,8 +29,8 @@
         <ng-container *ngSwitchCase="'Barberia'">
           <option *ngFor="let servizio of serviziBarberia" [value]="servizio">{{ servizio }}</option>
         </ng-container>
-        <ng-container *ngSwitchCase="'Consulenza d\'immagine'">
-          <option *ngFor="let servizio of consulenzaImmagine" [value]="servizio">{{ servizio }}</option>
+        <ng-container *ngSwitchCase="'Consulenza Immagine'">
+          <option *ngFor="let consulenza of consulenzaImmagine" [value]="consulenza">{{ consulenza }}</option>
         </ng-container>
         
         <ng-container *ngSwitchDefault>

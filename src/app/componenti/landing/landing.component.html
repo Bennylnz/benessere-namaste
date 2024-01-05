@@ -29,20 +29,16 @@
   </div>
 </div>
 
-<div class="container-fluid pt-5"  *ngIf="isUserLoggedIn()">
-<form (ngSubmit)="uploadFile()" enctype="multipart/form-data" class="d-flex justify-content-center align-items-center">
-  <input  #fileInput type="file" (change)="onFileSelected($event)">
-  <button class="btn" type="submit">Carica promo</button>
-  <button class="btn" (click)="deleteImage()">Elimina promo</button>
-</form>
-</div>
+<app-image-upload  *ngIf="isUserLoggedIn()" (imageUploaded)="onImageUploaded($event)"></app-image-upload>
 
-<div class="container-fluid d-flex justify-content-center pt-5">
-    <img *ngIf="imageUrl" [src]="imageUrl" alt="Foto caricata" class="promo">
+<div *ngIf="imageUrl" class="d-flex flex-column align-items-center justify-content-center">
+  <img [src]="imageUrl" alt="Uploaded Image" class="promo"/>
+  <button class="btn" *ngIf="isUserLoggedIn()"  (click)="deleteImage()">Elimina Promo</button>
 </div>
 
 
-<div id="carouselExample" class="carousel slide pt-5">
+
+<div id="carouselExample" class="carousel slide py-5">
   <p class="p-custom d-flex justify-content-center mb-5">Gallery</p>
   <div class="carousel-inner text-center">
     <div class="carousel-item active">

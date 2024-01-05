@@ -12,13 +12,13 @@ import { FirebaseService } from 'src/app/firebase.service';
 })
 export class AdminPageComponent implements OnInit {
   dataForm: FormGroup;
-  categorie: string[] = ['Estetica uomo', 'Estetica donna' , 'Parruccheria' , 'Barberia' , "Consulenza d'immagine"];
+  categorie: string[] = ['Estetica uomo', 'Estetica donna' , 'Parruccheria' , 'Barberia' , 'Consulenza Immagine'];
   trattamentiUomo: string[] = ['', 'Viso', 'Epilazione Uomo', 'Laser Uomo', 'Mani e Piedi'];
   trattamentiDonna: string[] = ['' ,'Trattamenti Corpo', 'Laser', 'Trucco Semipermanente', 'Sopracciglia e Ciglia', 'Make-Up', 'Nails', 'Pedicure' ];
   serviziParruccheria: string[] = ['', 'Servizio Styling', 'Servizio Tecnico', 'Servizio Sposa', 'Servizio Trattamenti'];
   serviziBarberia: string[] = ['', 'Servizio Styling', 'Servizio Tecnico', 'Servizio Sposo', 'Servizio Trattamenti'];
   epilazione: string[] = [ 'Cera Classica', 'Cera Brasiliana'];
-  consulenzaImmagine: string[] = [ 'Armocromia'];
+  consulenzaImmagine: string[] = ['', 'Armocromia'];
   
 
 
