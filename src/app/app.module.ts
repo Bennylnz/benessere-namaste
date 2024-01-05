@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +39,10 @@ import { NavbarComponent } from './componenti/navbar/navbar.component';
 import { TrattamentiComponent } from './componenti/trattamenti/trattamenti.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
-import { FooterComponent } from './componenti/footer/footer.component'
+import { FooterComponent } from './componenti/footer/footer.component';
+
+
+
 
 
 
@@ -62,6 +68,7 @@ import { FooterComponent } from './componenti/footer/footer.component'
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     MatIconModule,
     MatButtonModule,
     MatBadgeModule,

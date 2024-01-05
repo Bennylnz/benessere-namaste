@@ -1,6 +1,6 @@
 *{
-    background: #ddb892;
-    color: #342d25;
+    background: #342d25;
+    color: white;
     
 }
 
@@ -87,6 +87,12 @@ hr{
    width: 1000px;
    border-radius: 20px;
    box-shadow: 0px 6px 23px 4px rgba(52,45,37,0.62);   
+}
+
+.arm{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 23px 4px rgba(52,45,37,0.62);   
 }
 
 

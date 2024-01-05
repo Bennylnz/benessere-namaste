@@ -12,12 +12,14 @@ import { FirebaseService } from 'src/app/firebase.service';
 })
 export class AdminPageComponent implements OnInit {
   dataForm: FormGroup;
-  categorie: string[] = ['Estetica uomo', 'Estetica donna' , 'Parruccheria' , 'Barberia'];
+  categorie: string[] = ['Estetica uomo', 'Estetica donna' , 'Parruccheria' , 'Barberia' , "Consulenza d'immagine"];
   trattamentiUomo: string[] = ['', 'Viso', 'Epilazione Uomo', 'Laser Uomo', 'Mani e Piedi'];
-  trattamentiDonna: string[] = ['' ,'Trattamenti Corpo', 'Epilazione', 'Laser', 'Trucco Semipermanente', 'Sopracciglia e Ciglia', 'Make-Up', 'Nails', 'Pedicure'];
+  trattamentiDonna: string[] = ['' ,'Trattamenti Corpo', 'Laser', 'Trucco Semipermanente', 'Sopracciglia e Ciglia', 'Make-Up', 'Nails', 'Pedicure' ];
   serviziParruccheria: string[] = ['', 'Servizio Styling', 'Servizio Tecnico', 'Servizio Sposa', 'Servizio Trattamenti'];
   serviziBarberia: string[] = ['', 'Servizio Styling', 'Servizio Tecnico', 'Servizio Sposo', 'Servizio Trattamenti'];
-
+  epilazione: string[] = [ 'Cera Classica', 'Cera Brasiliana'];
+  consulenzaImmagine: string[] = [ 'Armocromia'];
+  
 
 
   constructor(
@@ -49,5 +51,5 @@ export class AdminPageComponent implements OnInit {
     const tipo = this.dataForm.get('tipo').value;
     const data = { ...this.dataForm.value };
     this.firebaseService.saveData(categoria, tipo, data);
-  }
+  }  
 }

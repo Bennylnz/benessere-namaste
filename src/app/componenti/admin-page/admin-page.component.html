@@ -21,6 +21,7 @@
         </ng-container>
         <ng-container *ngSwitchCase="'Estetica donna'">
           <option *ngFor="let trattamento of trattamentiDonna" [value]="trattamento">{{ trattamento }}</option>
+          <option *ngFor="let epil of epilazione" [value]="epil">{{ epil }}</option>
         </ng-container>
         <ng-container *ngSwitchCase="'Parruccheria'">
           <option *ngFor="let servizio of serviziParruccheria" [value]="servizio">{{ servizio }}</option>
@@ -28,6 +29,10 @@
         <ng-container *ngSwitchCase="'Barberia'">
           <option *ngFor="let servizio of serviziBarberia" [value]="servizio">{{ servizio }}</option>
         </ng-container>
+        <ng-container *ngSwitchCase="'Consulenza d\'immagine'">
+          <option *ngFor="let servizio of consulenzaImmagine" [value]="servizio">{{ servizio }}</option>
+        </ng-container>
+        
         <ng-container *ngSwitchDefault>
           <option>Seleziona il tipo</option>
         </ng-container>
@@ -49,5 +54,3 @@
 
   <button type="submit" class="btn ">Salva</button>
 </form>
-</div>
-  
