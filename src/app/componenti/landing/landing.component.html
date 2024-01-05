@@ -29,6 +29,18 @@
   </div>
 </div>
 
+<div class="container-fluid pt-5"  *ngIf="isUserLoggedIn()">
+<form (ngSubmit)="uploadFile()" enctype="multipart/form-data" class="d-flex justify-content-center align-items-center">
+  <input  #fileInput type="file" (change)="onFileSelected($event)">
+  <button class="btn" type="submit">Carica promo</button>
+  <button class="btn" (click)="deleteImage()">Elimina promo</button>
+</form>
+</div>
+
+<div class="container-fluid d-flex justify-content-center pt-5">
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="Foto caricata" class="promo">
+</div>
+
 
 <div id="carouselExample" class="carousel slide pt-5">
   <p class="p-custom d-flex justify-content-center mb-5">Gallery</p>
@@ -39,7 +51,7 @@
     </div>
     <div class="carousel-item">
       <video src="assets/media/video2.mp4" width="600" height="300" controls>
-      </video>
+      </video> 
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
