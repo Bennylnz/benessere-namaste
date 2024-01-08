@@ -51,26 +51,36 @@ export class TrattamentiComponent implements OnInit {
       .catch(error => console.error('Errore ', error));
   }
 
-  modificaDato(datoId: string) {
-    const nuovoNome = prompt('Inserisci il nuovo nome:');
-    const nuovoPrezzoStr = prompt('Inserisci il nuovo prezzo:');
-    
-    if (nuovoNome !== null && nuovoPrezzoStr !== null) {
-      const nuovoPrezzo = parseFloat(nuovoPrezzoStr);
-      
-      if (!isNaN(nuovoPrezzo)) {
-        // Chiamare il servizio Firebase per aggiornare i dati
-        this.firebaseService.updateDato(this.categoria, this.tipo, datoId, {
-          nome: nuovoNome,
-          prezzo: nuovoPrezzo
-        }).then(() => {
-          console.log('Dato aggiornato con successo');
-          // Aggiornare i dati dopo la modifica se necessario
-          this.caricaDati();
-        }).catch(error => console.error('Errore durante l\'aggiornamento del dato:', error));
-      } else {
-        console.error('Il prezzo inserito non è valido.');
-      }
-    }
+
+modificaDato(datoId: string) {
+  const datiAttuali = this.dati.find(item => item.id === datoId);
+
+  const nuovoNome = prompt('Inserisci il nuovo nome:', datiAttuali.nome);
+  const nuovoPrezzo = prompt('Inserisci il nuovo prezzo:', datiAttuali.prezzo);
+
+  const nuovoDato = {} as any;
+
+  // Verifica se il nuovoNome è stato inserito e non è vuoto
+  if (nuovoNome !== null && nuovoNome.trim() !== '') {
+    nuovoDato.nome = nuovoNome;
   }
+
+  // Verifica se il nuovoPrezzo è stato inserito e non è vuoto
+  if (nuovoPrezzo !== null && nuovoPrezzo.trim() !== '') {
+    nuovoDato.prezzo = nuovoPrezzo.trim();
+  }
+
+  // Chiamare il servizio Firebase per aggiornare i dati solo se ci sono dati da aggiornare
+  if (Object.keys(nuovoDato).length > 0) {
+    this.firebaseService.updateDato(this.categoria, this.tipo, datoId, nuovoDato)
+      .then(() => {
+        console.log('Dato aggiornato con successo');
+        // Aggiornare i dati dopo la modifica se necessario
+        this.caricaDati();
+      })
+      .catch(error => console.error('Errore durante l\'aggiornamento del dato:', error));
+  } else {
+    console.log('Nessun dato inserito per la modifica.');
+  }
+}  
 }
