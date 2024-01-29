@@ -1,0 +1,61 @@
+body{
+  background: #342d25;
+  color: white;
+}
+
+.container-fluid{
+  background-color: #342d25;
+}
+
+.wrapper{
+  background-color: #342d25;
+}
+
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  width: 500px;    
+  background-color: white;
+  color: #342d25 ;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+
+.reviewCustom {
+  cursor: pointer;
+}
+
+.card-title {
+  max-height: 80px; /* Altezza massima del testo mostrato */
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Aggiungi un'animazione per una transizione fluida */
+}
+
+.mostra-tutto {
+  max-height: none; /* Mostri tutto il testo quando la classe 'mostra-tutto' è presente */
+}
+
+.card{
+  border: none;
+}
+
+
+@media screen and (max-width: 992px) {
+  .swiper-slide {
+    width: 300px;
+  }
+}
+

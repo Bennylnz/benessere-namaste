@@ -41,12 +41,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { FooterComponent } from './componenti/footer/footer.component';
 import { ImageUploadComponent } from './componenti/image-upload/image-upload.component';
-
-
-
-
-
-
+import { RecensioniComponent } from './componenti/recensioni/recensioni.component';
+import { register } from 'swiper/element/bundle';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+register();
 
 
 @NgModule({
@@ -59,6 +57,7 @@ import { ImageUploadComponent } from './componenti/image-upload/image-upload.com
     TrattamentiComponent,
     FooterComponent,
     ImageUploadComponent,
+    RecensioniComponent,
     
   ],
   imports: [
@@ -87,7 +86,8 @@ import { ImageUploadComponent } from './componenti/image-upload/image-upload.com
     ToastrModule,
     MatTreeModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    FontAwesomeModule
    
     
   ],

@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+
+
+<body class="mt-5"> 
+    <div class="container-fluid">   
+    <div class="swiper mySwiper">
+        <h1 class="text-center mb-4">Dicono di Noi</h1>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let recensione of recensioni | async"> 
+                <button class="btn btn-danger" (click)="eliminaRecensione(recensione.id)" *ngIf="isUserLoggedIn()">Elimina recensione</button>                             
+                <h2 class="card-title">{{ recensione.name | titlecase }}</h2>
+                <p>Recensione:</p>
+                <p class="card-title" [ngClass]="{'mostra-tutto': mostraTutto}">{{ recensione.description }}</p>
+                <div *ngIf="!mostraTutto && recensione.description.length > 10">
+                    <button class="btn" (click)="mostraTutto = true">Mostra tutto</button>
+                </div>
+                <button class="btn" *ngIf="mostraTutto" (click)="mostraTutto = false">Mostra meno</button>    
+                <div class="stars my-4">
+                    <i class="fa-regular fa-star fa-solid fa-2xl" *ngFor="let star of generateStarsArray(recensione.reviewStars)"></i>
+                </div>               
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+    
+    
+    
+    
+    
+    <div class="wrapper d-flex flex-column align-items-center mt-5">
+        <h1>Lascia una recensione</h1>
+        <mat-form-field class="w-50">
+            <mat-label>Nome e Cognome</mat-label>
+            <input matInput type="text" id="name" [(ngModel)]="reviewName">
+        </mat-form-field>
+        
+        <mat-form-field class="w-50">
+            <mat-label>Recensione</mat-label>
+            <textarea matInput type="text" id="description" [(ngModel)]="reviewDescription"></textarea>
+        </mat-form-field>  
+        
+        <h2>Inserisci un voto da 1 a 5</h2>
+        <div class="stars my-2">
+            <i class="fa-regular fa-star fa-2xl reviewCustom" 
+            (click)="setStars(1)" 
+            [ngClass]="{'fa-solid': reviewStars >= 1}"
+            (mouseenter)="hoverEnabled ? hoverStars(1) : ''"
+            (mouseleave)="hoverEnabled ? resetStars() : ''"></i>
+            <i class="fa-regular fa-star fa-2xl reviewCustom" 
+            (click)="setStars(2)" 
+            [ngClass]="{'fa-solid': reviewStars >= 2}"
+            (mouseenter)="hoverEnabled ? hoverStars(2) : ''"
+            (mouseleave)="hoverEnabled ? resetStars() : ''"></i>
+            <i class="fa-regular fa-star fa-2xl reviewCustom" 
+            (click)="setStars(3)" 
+            [ngClass]="{'fa-solid': reviewStars >= 3}"
+            (mouseenter)="hoverEnabled ? hoverStars(3) : ''"
+            (mouseleave)="hoverEnabled ? resetStars() : ''"></i>
+            <i class="fa-regular fa-star fa-2xl reviewCustom" 
+            (click)="setStars(4)" 
+            [ngClass]="{'fa-solid': reviewStars >= 4}"
+            (mouseenter)="hoverEnabled ? hoverStars(4) : ''"
+            (mouseleave)="hoverEnabled ? resetStars() : ''"></i>
+            <i class="fa-regular fa-star fa-2xl reviewCustom" 
+            (click)="setStars(5)" 
+            [ngClass]="{'fa-solid': reviewStars >= 5}"
+            (mouseenter)="hoverEnabled ? hoverStars(5) : ''"
+            (mouseleave)="hoverEnabled ? resetStars() : ''"></i>
+        </div>        
+        <button class="btn text-white my-3" (click)="salvaRecensione()">Salva Recensione</button>
+    </div> 
+
+
+    <app-footer></app-footer>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

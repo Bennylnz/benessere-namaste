@@ -4,6 +4,7 @@ import { LandingComponent } from './componenti/landing/landing.component';
 import { LoginComponent } from './componenti/login/login.component';
 import { AdminPageComponent } from './componenti/admin-page/admin-page.component';
 import { TrattamentiComponent } from './componenti/trattamenti/trattamenti.component';
+import { RecensioniComponent } from './componenti/recensioni/recensioni.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,8 @@ const routes: Routes = [
   { path: 'landing', component: LandingComponent },
   { path: 'adminPage', component: AdminPageComponent,},
   { path: 'login', component: LoginComponent,},
+  { path: 'recensioni', component: RecensioniComponent,},
+
   { path: 'trattamenti/:categoria/:tipo', component: TrattamentiComponent,}, 
 ];
 
